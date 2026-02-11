@@ -1,0 +1,8 @@
+{
+  "name": "Mine Profile Clone",
+  "description": "A 1:1 pixel-perfect clone of a crypto/wallet profile interface based on provided specifications and screenshot.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
