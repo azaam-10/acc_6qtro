@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import MinePage from './pages/MinePage';
-import BottomNav from './components/BottomNav';
+import MinePage from './pages/MinePage.tsx';
+import BottomNav from './components/BottomNav.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('mine');
