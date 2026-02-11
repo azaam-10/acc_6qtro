@@ -22,24 +22,18 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-6">
-      {/* Backdrop with strong blur as requested */}
+      {/* Backdrop - Removed onClick to prevent closing */}
       <div 
-        className="absolute inset-0 bg-black/40 backdrop-blur-md transition-opacity"
+        className="absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity"
       ></div>
 
       {/* Modal Content */}
       <div className="bg-white w-full max-w-[350px] rounded-[28px] overflow-hidden shadow-2xl relative animate-in fade-in zoom-in duration-300" dir="rtl">
         
-        {/* Header - Hidden or very simple for this flow */}
-        <div className="p-6 pb-0 flex justify-end">
-          {step < 4 && (
-            <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
-              <X size={20} />
-            </button>
-          )}
-        </div>
+        {/* Header Spacer - Close button removed to prevent exit */}
+        <div className="p-6 pb-2"></div>
 
-        <div className="p-6 pt-2">
+        <div className="p-6 pt-0">
           {step === 1 && (
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
