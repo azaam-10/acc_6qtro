@@ -1,31 +1,29 @@
 
 import React from 'react';
-import { ChevronLeft, User, FileText, ClipboardList, Settings, ShieldCheck, HelpCircle } from 'lucide-react';
-
-const menuItems = [
-  { id: 1, label: 'المعلومات الشخصية', icon: <User size={18} />, color: 'text-blue-500' },
-  { id: 2, label: 'سجل الشحن', icon: <FileText size={18} />, color: 'text-green-500' },
-  { id: 3, label: 'تفاصيل السحب', icon: <ClipboardList size={18} />, color: 'text-orange-500' },
-  { id: 4, label: 'إعدادات الحساب', icon: <Settings size={18} />, color: 'text-gray-500' },
-  { id: 5, label: 'مركز الأمان', icon: <ShieldCheck size={18} />, color: 'text-red-500' },
-  { id: 6, label: 'المساعدة والدعم', icon: <HelpCircle size={18} />, color: 'text-indigo-500' },
-];
+import { User, FileText, Share2, Settings, ChevronRight, CreditCard, LayoutDashboard } from 'lucide-react';
 
 const MenuList: React.FC = () => {
+  const menuItems = [
+    { label: 'معلومات شخصية', icon: <LayoutDashboard size={22} /> },
+    { label: 'سجل الإيداع', icon: <CreditCard size={22} /> },
+    { label: 'تفاصيل الانسحاب', icon: <FileText size={22} /> },
+    { label: 'إعدادات العملية', icon: <Settings size={22} /> },
+  ];
+
   return (
-    <div className="bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 mx-5 mt-6">
-      {menuItems.map((item, index) => (
+    <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+      {menuItems.map((item, idx) => (
         <div 
-          key={item.id} 
-          className={`flex items-center justify-between p-4 active:bg-gray-50 transition-colors cursor-pointer ${index !== menuItems.length - 1 ? 'border-b border-gray-50' : ''}`}
+          key={idx} 
+          className="flex items-center justify-between px-5 py-4 border-b border-gray-50 last:border-0 active:bg-gray-50 transition-colors"
         >
           <div className="flex items-center gap-4">
-            <div className={`p-2 rounded-xl bg-gray-50 ${item.color}`}>
+            <div className="bg-gray-100 p-1.5 rounded-lg text-gray-400">
               {item.icon}
             </div>
-            <span className="text-[14px] font-semibold text-gray-700">{item.label}</span>
+            <span className="text-[15px] text-gray-700 font-medium" dir="rtl">{item.label}</span>
           </div>
-          <ChevronLeft size={18} className="text-gray-300" />
+          <ChevronRight size={20} className="text-gray-300" />
         </div>
       ))}
     </div>

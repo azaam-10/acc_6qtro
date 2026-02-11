@@ -9,9 +9,9 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="flex justify-center w-full min-h-screen bg-gray-100 items-center">
-        <div className="w-full max-w-[430px] min-h-screen sm:min-h-[844px] sm:max-h-[932px] bg-white flex flex-col relative shadow-2xl overflow-hidden sm:rounded-[40px] border-[8px] border-white">
-          <main className="flex-grow overflow-y-auto no-scrollbar pb-24 bg-[#F8F9FB]">
+      <div className="flex justify-center w-full min-h-screen bg-gray-100">
+        <div className="w-full max-w-[430px] min-h-screen bg-[#F8F9FB] flex flex-col relative shadow-xl overflow-hidden border-x border-gray-200">
+          <main className="flex-grow overflow-y-auto no-scrollbar">
             <Routes>
               <Route path="/mine" element={<MinePage />} />
               <Route path="/" element={<Navigate to="/mine" replace />} />
