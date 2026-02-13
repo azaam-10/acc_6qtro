@@ -17,10 +17,10 @@ const Header: React.FC = () => {
         <div className="w-[72px] h-[72px] bg-white rounded-full flex-shrink-0"></div>
         <div className="flex flex-col items-start" dir="rtl">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-wide">gHKA616</span>
-            <span className="bg-[#F5B400] text-white text-[10px] px-2 py-0.5 rounded-md font-bold">VIP 1</span>
+            <span className="bg-[#F5B400] text-white text-[10px] px-2 py-0.5 rounded-md font-bold">VIP 3</span>
+            <span className="text-xl font-bold tracking-wide">5388767403</span>
           </div>
-          <span className="text-sm opacity-90 mt-1">شفرة الدعوة: 382705</span>
+          <span className="text-sm opacity-90 mt-1">شفرة الدعوة: 578050</span>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           <p className="text-sm opacity-90 mb-2">حساب شخصي</p>
           <div className="flex items-baseline gap-2">
             <span className="text-sm font-bold">USDT</span>
-            <span className="text-2xl font-bold">233.5622</span>
+            <span className="text-2xl font-bold">58555.5185</span>
           </div>
         </div>
 

